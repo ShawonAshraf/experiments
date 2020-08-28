@@ -1,3 +1,3 @@
-# nn from scratch
+# experiments nn
 
-as the title suggests - implementing a NN from scratch
+Jupyter notebooks on experiments I did on various things NLP ML etc.
