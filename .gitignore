@@ -178,4 +178,6 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+review_polarity/
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode
