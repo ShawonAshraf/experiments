@@ -128,6 +128,3 @@ def prepare_corpus(remove_sw=True):
             corpus.append((idx, tokens))
 
     return corpus
-
-
-download_and_unzip()
