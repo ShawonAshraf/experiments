@@ -167,7 +167,7 @@ dmypy.json
 .pytype/
 
 ### VisualStudioCode ###
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -178,6 +178,11 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+# annoying!
+.idea/
+
+
+# corpus
 review_polarity/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode
