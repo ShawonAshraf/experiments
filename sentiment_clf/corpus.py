@@ -44,8 +44,6 @@ def remove_punctuation(tokens):
 
 def clean(tokens, remove_sw=True):
     if remove_sw:
-        print("Loading English Stopwords")
-        ignore = stopwords.words("english")
         x = remove_stopwords(tokens)
     x = remove_punctuation(x)
 
