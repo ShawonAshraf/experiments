@@ -1,3 +1,3 @@
 # experiments
 
-Jupyter notebooks on experiments I did on various things NLP ML etc.
+This repo is a minefield. Don't take anything from here as a reference.
