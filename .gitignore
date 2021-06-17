@@ -185,4 +185,7 @@ dmypy.json
 # corpus
 review_polarity/
 
+# lightning logs
+lightning_logs/
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode
