@@ -193,3 +193,6 @@ lightning_logs/
 lightning_bert_comet/lightning-bert-comet/1e3ff79a58c547418344d71a55c71fe2/checkpoints/
 
 lightning_bert_comet/lightning-bert-comet/55c96ca1c2f94e81ab70ab5a0e573770/checkpoints/
+
+# tensorboard
+runs/
