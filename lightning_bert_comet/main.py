@@ -57,10 +57,10 @@ comet_api_key = os.getenv("COMET_API_KEY")
 comet_logger = CometLogger(
     api_key=comet_api_key,
     project_name='lightning-bert-comet',
-    experiment_name='exp-3',
+    experiment_name='exp-4-cpu',
     auto_output_logging="simple",
 )
 
 model = SentiBERT(model_name)
-trainer = pl.Trainer(gpus=1, max_epochs=2, logger=comet_logger)
+trainer = pl.Trainer(max_epochs=2, logger=comet_logger)
 trainer.fit(model, train_loader, val_loader)
