@@ -23,6 +23,6 @@ class SentiBERT(nn.Module):
         out = self.bert(input_ids=input_ids, attention_mask=attention_mask)
         # get the hidden state of the token CLS
         out = out[0][:, 0, :]
-        out = self.classifier(out)
+        y = self.classifier(out)
 
-        return out
+        return y
