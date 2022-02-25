@@ -37,7 +37,6 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
 
             # log loss
             if print_counter % 10 == 0:
-                print("\nvalidation::")
                 validation_losses = []
 
                 model.eval()  # switch mode
