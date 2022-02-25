@@ -13,9 +13,10 @@ class SentiBERT(nn.Module):
             param.requires_grad = False
 
         self.classifier = nn.Sequential(
-            nn.Linear(768, 50),
+            nn.Linear(768, 256),
             nn.ReLU(),
-            nn.Linear(50, 2)
+            nn.Linear(256, 2),
+            nn.Softmax(dim=1)
         )
 
     def forward(self, input_ids, attention_mask):

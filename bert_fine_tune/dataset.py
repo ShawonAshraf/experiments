@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 
 class PolarityReviewDataset(Dataset):
 
-    def __init__(self, reviews, labels, max_length=512, model_name="bert-base-cased"):
+    def __init__(self, reviews, labels, max_length=256, model_name="bert-base-cased"):
         self.MAX_LEN = max_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
