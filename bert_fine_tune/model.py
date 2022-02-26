@@ -18,7 +18,6 @@ class SentiBERT(nn.Module):
 
     def forward(self, input_ids, attention_mask):
         out = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        # get the hidden state of the token CLS
         out = out.pooler_output
         y = self.classifier(out)
 
