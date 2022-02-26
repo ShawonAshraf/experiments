@@ -19,4 +19,4 @@ if __name__ == "__main__":
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
     train(model, train_loader, val_loader,
-          epochs=2, optimizer=optimizer, loss_fn=loss_fn, device=device)
+          epochs=5, optimizer=optimizer, loss_fn=loss_fn, device=device)

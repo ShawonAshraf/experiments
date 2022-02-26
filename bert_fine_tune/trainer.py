@@ -8,7 +8,7 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
 
     for e in range(epochs):
         model.train()
-        for td in tqdm(train_loader):
+        for td in train_loader:
             print_counter += 1
 
             # unpack data and send to device
@@ -26,8 +26,6 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
 
             # forward pass
             output = model(input_ids, attention_mask)
-
-            # the max probability based class
             output, _ = torch.max(output, dim=1)
 
             # backprop
