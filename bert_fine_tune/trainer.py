@@ -19,7 +19,7 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
             attention_mask = attention_mask.to(device)
 
             label = td["label"]
-            label = label.to(device)
+            label = label.long().to(device)
 
             # zero gradients
             model.zero_grad()
@@ -48,7 +48,7 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
                         attention_mask = attention_mask.to(device)
 
                         label = td_val["label"]
-                        label = label.to(device)
+                        label = label.long().to(device)
 
                         # repeat same steps from forward pass
                         out = model(input_ids, attention_mask)

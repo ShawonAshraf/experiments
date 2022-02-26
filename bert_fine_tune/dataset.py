@@ -35,5 +35,5 @@ class PolarityReviewDataset(Dataset):
             "text": review,
             "input_ids": encoding["input_ids"].flatten(),
             "attention_mask": encoding['attention_mask'].flatten(),
-            "label": torch.tensor(label).long()
+            "label": torch.tensor(label)
         }
