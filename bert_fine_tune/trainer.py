@@ -26,7 +26,7 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
 
             # forward pass
             output = model(input_ids, attention_mask)
-            output, _ = torch.max(output, dim=1)
+            # output, _ = torch.max(output, dim=1)
 
             # backprop
             loss = loss_fn(output, label)
@@ -52,7 +52,7 @@ def train(model, train_loader, val_loader, epochs, optimizer, loss_fn, device):
 
                         # repeat same steps from forward pass
                         out = model(input_ids, attention_mask)
-                        out, _ = torch.max(out, dim=1)
+                        # out, _ = torch.max(out, dim=1)
                         val_loss = loss_fn(out, label)
 
                         # add loss to validation losses

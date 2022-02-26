@@ -15,7 +15,7 @@ if __name__ == "__main__":
     model = model.to(device=device)
 
     lr = 2e-5
-    loss_fn = nn.BCELoss()
+    loss_fn = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
     train(model, train_loader, val_loader,

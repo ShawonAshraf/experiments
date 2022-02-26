@@ -13,7 +13,7 @@ class SentiBERT(nn.Module):
             nn.Linear(768, 256),
             nn.ReLU(),
             nn.Linear(256, 1),
-            nn.Sigmoid()
+            nn.Softmax(dim=1)
         )
 
     def forward(self, input_ids, attention_mask):
