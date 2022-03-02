@@ -1,22 +1,13 @@
 import torch
-import torch.nn as nn
+from transformers import AutoTokenizer, AutoModel
 
-# batch size, hidden_last, out
-x = torch.randn((2, 5, 1))
-print("x")
-print(x)
-print()
+tokenizer = AutoTokenizer.from_pretrained(
+    "google/reformer-crime-and-punishment")
+model = AutoModel.from_pretrained("google/reformer-crime-and-punishment")
 
-softmax = nn.Softmax(dim=1)
-sigmoid = nn.Sigmoid()
+text = "GPUs are expensive these days!"
+ins = tokenizer(text, return_tensors="pt")
+# print(ins)
 
-s = sigmoid(x)
-# s = softmax(x)
-print("activation")
-print(s)
-print()
-
-out, _ = torch.max(s, dim=1)
-print("torch.max")
-print(out)
-print()
+out = model(**ins)
+print(out.last_hidden_state.shape)

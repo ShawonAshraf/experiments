@@ -1,16 +1,16 @@
 import torch
 import torch.nn as nn
-from transformers import AutoModel
+from transformers import ReformerModel
 
 
 class SentiBERT(nn.Module):
-    def __init__(self, model_name="bert-base-cased"):
+    def __init__(self, model_name="google/reformer-crime-and-punishment"):
         super(SentiBERT, self).__init__()
 
-        self.bert = AutoModel.from_pretrained(model_name)
+        self.bert = ReformerModel.from_pretrained(model_name)
 
         self.classifier = nn.Sequential(
-            nn.Linear(768, 256),
+            nn.Linear(512, 256),
             nn.ReLU(),
             nn.Linear(256, 1),
             nn.Softmax(dim=1)
