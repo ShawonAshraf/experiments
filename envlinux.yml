@@ -26,10 +26,10 @@ brotlipy=0.7.0=py39h3811e60_1001
 brunsli=0.1=h2531618_0
 bzip2=1.0.8=h7b6447c_0
 c-ares=1.18.1=h7f8727e_0
-ca-certificates=2021.10.8=ha878542_0
+ca-certificates=2022.2.1=h06a4308_0
 cachetools=5.0.0=pypi_0
 catalogue=2.0.6=py39hf3d152e_1
-certifi=2021.10.8=py39hf3d152e_1
+certifi=2021.10.8=py39h06a4308_2
 cffi=1.15.0=py39hd667e15_1
 cfitsio=3.470=hf0d0db6_6
 charls=2.2.0=h2531618_0
@@ -226,7 +226,7 @@ pysocks=1.7.1=py39hf3d152e_4
 python=3.9.7=h12debd9_1
 python-dateutil=2.8.2=pyhd3eb1b0_0
 python_abi=3.9=2_cp39
-pytorch=1.10.2=py3.9_cuda11.3_cudnn8.2.0_0
+pytorch=1.11.0=py3.9_cuda11.3_cudnn8.2.0_0
 pytorch-lightning=1.5.10=pypi_0
 pytorch-mutex=1.0=cuda
 pytz=2021.3=pyhd3eb1b0_0
@@ -280,9 +280,9 @@ tk=8.6.11=h1ccaba5_0
 tokenizers=0.10.3=pypi_0
 toml=0.10.2=pypi_0
 toolz=0.11.2=pyhd3eb1b0_0
-torchaudio=0.10.2=py39_cu113
+torchaudio=0.11.0=py39_cu113
 torchmetrics=0.7.1=pypi_0
-torchvision=0.11.3=py39_cu113
+torchvision=0.12.0=py39_cu113
 tornado=6.1=py39h27cfd23_0
 tqdm=4.62.3=pyhd8ed1ab_0
 traitlets=5.1.1=pyhd3eb1b0_0
