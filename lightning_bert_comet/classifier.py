@@ -19,7 +19,7 @@ class SentiBERT(LightningModule):
         self.linear = nn.Linear(768, 1)
         self.sigmoid = nn.Sigmoid()
 
-        self.loss_fn = nn.BCELoss()
+        self.loss_fn = nn.BCEWithLogitsLoss()
 
     def forward(self, x):
         input_ids, attention_mask = x

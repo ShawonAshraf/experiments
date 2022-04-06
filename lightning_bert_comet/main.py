@@ -1,4 +1,3 @@
-#from comet_ml import Experiment
 from pytorch_lightning.loggers import CometLogger
 import torch
 from torch.utils.data import DataLoader
@@ -15,7 +14,9 @@ from corpus import *
 from tqdm import tqdm
 import os
 
-batch_size = 16
+torch.backends.cudnn.benchmark = True
+
+batch_size = 32
 model_name = "bert-base-cased"
 MAX_LEN = 512
 
@@ -37,11 +38,11 @@ for idx, cat in enumerate(catgeories):
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 x_train, x_test, y_train, y_test = train_test_split(
-    reviews, labels, random_state=42, train_size=0.8
+    reviews, labels, random_state=0, train_size=0.8
 )
 
 x_train, x_val, y_train, y_val = train_test_split(
-    x_train, y_train, train_size=0.8, random_state=42)
+    x_train, y_train, train_size=0.8, random_state=0)
 
 
 training_dataset = PolarityReviewDataset(x_train, y_train, tokenizer, MAX_LEN)
@@ -49,18 +50,16 @@ val_dataset = PolarityReviewDataset(x_val, y_val, tokenizer, MAX_LEN)
 
 
 train_loader = DataLoader(
-    training_dataset, shuffle=True, batch_size=batch_size, num_workers=32)
-val_loader = DataLoader(val_dataset, batch_size=batch_size, num_workers=32)
-
-#comet_api_key = os.getenv("COMET_API_KEY")
-
-#comet_logger = CometLogger(#
-   # api_key=comet_api_key,
-   # project_name='lightning-bert-comet',
-   # experiment_name='exp-4-cpu',
-   # auto_output_logging="simple",
-#)
+    training_dataset, shuffle=True, batch_size=batch_size, num_workers=32, pin_memory=True)
+val_loader = DataLoader(val_dataset, batch_size=batch_size,
+                        num_workers=32, pin_memory=True)
 
 model = SentiBERT(model_name)
-trainer = pl.Trainer(accelerator="gpu", devices=1, max_epochs=3)
+trainer = pl.Trainer(
+    accelerator="gpu",
+    devices=1,
+    max_epochs=2,
+    precision=16,
+    log_every_n_steps=10)
+
 trainer.fit(model, train_loader, val_loader)
