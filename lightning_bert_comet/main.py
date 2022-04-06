@@ -1,4 +1,4 @@
-from comet_ml import Experiment
+#from comet_ml import Experiment
 from pytorch_lightning.loggers import CometLogger
 import torch
 from torch.utils.data import DataLoader
@@ -49,18 +49,18 @@ val_dataset = PolarityReviewDataset(x_val, y_val, tokenizer, MAX_LEN)
 
 
 train_loader = DataLoader(
-    training_dataset, shuffle=True, batch_size=batch_size)
-val_loader = DataLoader(val_dataset, batch_size=batch_size)
+    training_dataset, shuffle=True, batch_size=batch_size, num_workers=32)
+val_loader = DataLoader(val_dataset, batch_size=batch_size, num_workers=32)
 
-comet_api_key = os.getenv("COMET_API_KEY")
+#comet_api_key = os.getenv("COMET_API_KEY")
 
-comet_logger = CometLogger(
-    api_key=comet_api_key,
-    project_name='lightning-bert-comet',
-    experiment_name='exp-4-cpu',
-    auto_output_logging="simple",
-)
+#comet_logger = CometLogger(#
+   # api_key=comet_api_key,
+   # project_name='lightning-bert-comet',
+   # experiment_name='exp-4-cpu',
+   # auto_output_logging="simple",
+#)
 
 model = SentiBERT(model_name)
-trainer = pl.Trainer(max_epochs=2, logger=comet_logger)
+trainer = pl.Trainer(accelerator="gpu", devices=1, max_epochs=3)
 trainer.fit(model, train_loader, val_loader)
