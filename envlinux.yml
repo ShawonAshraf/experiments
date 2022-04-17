@@ -80,6 +80,7 @@ dependencies:
   - jupyterlab_pygments=0.1.2=py_0
   - jupyterlab_server=2.12.0=pyhd8ed1ab_0
   - jupyterlab_widgets=1.0.0=pyhd3eb1b0_1
+  - jupytext=1.13.8=pyh4b9bcc7_0
   - jxrlib=1.1=h7b6447c_2
   - krb5=1.19.2=hac12032_0
   - lame=3.100=h7b6447c_0
@@ -115,8 +116,11 @@ dependencies:
   - libzopfli=1.0.3=he6710b0_0
   - locket=0.2.1=py39h06a4308_2
   - lz4-c=1.9.3=h295c915_1
+  - markdown-it-py=2.0.1=pyhd8ed1ab_0
   - markupsafe=2.0.1=py39h27cfd23_0
   - matplotlib-inline=0.1.2=pyhd3eb1b0_2
+  - mdit-py-plugins=0.3.0=pyhd8ed1ab_0
+  - mdurl=0.1.0=pyhd8ed1ab_0
   - mistune=0.8.4=py39h27cfd23_1000
   - mkl=2021.4.0=h06a4308_640
   - mkl-service=2.4.0=py39h7f8727e_0
@@ -194,6 +198,7 @@ dependencies:
   - threadpoolctl=2.2.0=pyh0d69192_0
   - tifffile=2021.7.2=pyhd3eb1b0_2
   - tk=8.6.11=h1ccaba5_0
+  - toml=0.10.2=pyhd8ed1ab_0
   - toolz=0.11.2=pyhd3eb1b0_0
   - torchaudio=0.11.0=py39_cu113
   - torchvision=0.12.0=py39_cu113
@@ -245,7 +250,13 @@ dependencies:
     - jax==0.3.4
     - jaxlib==0.3.2+cuda11.cudnn82
     - jmp==0.0.2
+    - jupyter-contrib-core==0.3.3
+    - jupyter-contrib-nbextensions==0.5.1
+    - jupyter-highlight-selected-word==0.2.0
+    - jupyter-latex-envs==1.4.6
+    - jupyter-nbextensions-configurator==0.4.1
     - kiwisolver==1.4.2
+    - lxml==4.8.0
     - markdown==3.3.6
     - matplotlib==3.5.1
     - multidict==6.0.2
@@ -269,7 +280,6 @@ dependencies:
     - tensorboard-data-server==0.6.1
     - tensorboard-plugin-wit==1.8.1
     - tokenizers==0.11.6
-    - toml==0.10.2
     - torchmetrics==0.7.3
     - tqdm==4.64.0
     - transformers==4.17.0
