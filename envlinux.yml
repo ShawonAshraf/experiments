@@ -23,8 +23,8 @@ dependencies:
   - brunsli=0.1=h2531618_0
   - bzip2=1.0.8=h7b6447c_0
   - c-ares=1.18.1=h7f8727e_0
-  - ca-certificates=2021.10.8=ha878542_0
-  - certifi=2021.10.8=py39hf3d152e_2
+  - ca-certificates=2022.3.29=h06a4308_1
+  - certifi=2021.10.8=py39h06a4308_2
   - cffi=1.15.0=py39hd667e15_1
   - cfitsio=3.470=hf0d0db6_6
   - charls=2.2.0=h2531618_0
@@ -99,6 +99,7 @@ dependencies:
   - libgomp=9.3.0=h5101ec6_17
   - libiconv=1.15=h63c8f33_5
   - libidn2=2.3.2=h7f8727e_0
+  - libllvm11=11.1.0=h3826bc1_1
   - libnghttp2=1.46.0=hce63b2e_0
   - libpng=1.6.37=hbc83047_0
   - libsodium=1.0.18=h7b6447c_0
@@ -114,6 +115,7 @@ dependencies:
   - libxcb=1.14=h7b6447c_0
   - libxml2=2.9.12=h03d6c58_0
   - libzopfli=1.0.3=he6710b0_0
+  - llvmlite=0.38.0=py39h4ff587b_0
   - locket=0.2.1=py39h06a4308_2
   - lz4-c=1.9.3=h295c915_1
   - markdown-it-py=2.0.1=pyhd8ed1ab_0
@@ -137,6 +139,7 @@ dependencies:
   - networkx=2.7.1=pyhd3eb1b0_0
   - notebook=6.4.8=py39h06a4308_0
   - notebook-shim=0.1.0=pyhd8ed1ab_0
+  - numba=0.55.1=py39h51133e4_0
   - numexpr=2.8.1=py39h6abb31d_0
   - numpy=1.21.2=py39h20f2e39_0
   - numpy-base=1.21.2=py39h79a1101_0
@@ -192,6 +195,7 @@ dependencies:
   - sortedcontainers=2.4.0=pyhd3eb1b0_0
   - sqlite=3.38.2=hc218d9a_0
   - stack_data=0.2.0=pyhd3eb1b0_0
+  - tbb=2021.5.0=hd09550d_0
   - tblib=1.7.0=pyhd3eb1b0_0
   - terminado=0.13.1=py39h06a4308_0
   - testpath=0.5.0=pyhd3eb1b0_0
@@ -226,24 +230,34 @@ dependencies:
     - accelerate==0.6.2
     - aiohttp==3.8.1
     - aiosignal==1.2.0
+    - analytics-python==1.4.0
+    - asgiref==3.5.0
     - async-timeout==4.0.2
     - autopep8==1.6.0
+    - backoff==1.10.0
+    - bcrypt==3.2.0
     - bigjson==1.0.8
     - cachetools==5.0.0
     - chex==0.1.2
     - click==8.1.2
+    - clip==1.0
     - cycler==0.11.0
     - dm-haiku==0.0.6
     - dm-tree==0.1.6
+    - fastapi==0.75.2
+    - ffmpy==0.3.0
     - filelock==3.6.0
     - flatbuffers==2.0
     - flax==0.4.1
     - fonttools==4.31.2
     - frozenlist==1.3.0
+    - ftfy==6.1.1
     - gensim==4.1.2
     - google-auth==2.6.2
     - google-auth-oauthlib==0.4.6
+    - gradio==2.9.4
     - grpcio==1.44.0
+    - h11==0.13.0
     - h5py==3.6.0
     - huggingface-hub==0.5.0
     - ijson==3.1.4
@@ -256,25 +270,35 @@ dependencies:
     - jupyter-latex-envs==1.4.6
     - jupyter-nbextensions-configurator==0.4.1
     - kiwisolver==1.4.2
+    - linkify-it-py==1.0.3
     - lxml==4.8.0
     - markdown==3.3.6
     - matplotlib==3.5.1
+    - monotonic==1.6
     - multidict==6.0.2
     - nltk==3.7
     - oauthlib==3.2.0
     - opt-einsum==3.3.0
     - optax==0.1.1
+    - orjson==3.6.8
+    - paramiko==2.10.4
     - protobuf==3.20.0
     - pyasn1==0.4.8
     - pyasn1-modules==0.2.8
     - pycodestyle==2.8.0
+    - pycryptodome==3.14.1
+    - pydantic==1.9.0
     - pydeprecate==0.3.2
+    - pydub==0.25.1
+    - pynacl==1.5.0
+    - python-multipart==0.0.5
     - pytorch-lightning==1.6.0
     - regex==2022.3.15
     - requests-oauthlib==1.3.1
     - rsa==4.8
     - sacremoses==0.0.49
     - smart-open==5.2.1
+    - starlette==0.17.1
     - tabulate==0.8.9
     - tensorboard==2.8.0
     - tensorboard-data-server==0.6.1
@@ -282,7 +306,9 @@ dependencies:
     - tokenizers==0.11.6
     - torchmetrics==0.7.3
     - tqdm==4.64.0
-    - transformers==4.17.0
+    - transformers==4.18.0
+    - uc-micro-py==1.0.1
+    - uvicorn==0.17.6
     - werkzeug==2.1.1
     - yarl==1.7.2
 prefix: /home/shawon/miniconda3/envs/experiments
