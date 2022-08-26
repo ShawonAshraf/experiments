@@ -18,7 +18,6 @@ dependencies:
   - cffi=1.15.0=py310hd667e15_1
   - charset-normalizer=2.1.0=pyhd8ed1ab_0
   - cryptography=37.0.2=py310h597c629_0
-  - cuda-nvcc=11.7.64=0
   - cudatoolkit=11.6.0=hecad31d_10
   - curl=7.82.0=h7f8727e_0
   - cycler=0.11.0=pyhd3eb1b0_0
