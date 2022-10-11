@@ -20,6 +20,7 @@ contourpy==1.0.5
 cycler==0.11.0
 debugpy==1.6.3
 decorator==5.1.1
+deepspeed==0.7.3
 defusedxml==0.7.1
 docker-pycreds==0.4.0
 entrypoints==0.4
@@ -35,6 +36,7 @@ google-auth==2.12.0
 google-auth-oauthlib==0.4.6
 grpcio==1.49.1
 h5py==3.7.0
+hjson==3.1.0
 huggingface-hub==0.10.0
 idna==3.4
 imageio==2.22.1
@@ -66,6 +68,7 @@ nbconvert==7.2.1
 nbformat==5.6.1
 nest-asyncio==1.5.6
 networkx==2.8.7
+ninja==1.10.2.4
 nltk==3.7
 notebook==6.4.12
 numpy==1.23.3
@@ -85,10 +88,12 @@ protobuf==3.19.6
 psutil==5.9.2
 ptyprocess==0.7.0
 pure-eval==0.2.2
+py-cpuinfo==8.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.9.1
 pycparser==2.21
+pydantic==1.10.2
 pyDeprecate==0.3.2
 Pygments==2.13.0
 pyparsing==3.0.9
@@ -126,17 +131,14 @@ tifffile==2022.8.12
 tinycss2==1.1.1
 tokenizers==0.12.1
 toml==0.10.2
---find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.12.1+cu116
---find-links https://download.pytorch.org/whl/torch_stable.html
 torchaudio==0.12.1+cu116
 torchmetrics==0.10.0
---find-links https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.13.1+cu116
 tornado==6.2
 tqdm==4.64.1
 traitlets==5.4.0
-transformers==4.22.2
+transformers==4.23.1
 typing_extensions==4.4.0
 urllib3==1.26.12
 wandb==0.13.4
