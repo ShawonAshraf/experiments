@@ -126,9 +126,12 @@ tifffile==2022.8.12
 tinycss2==1.1.1
 tokenizers==0.12.1
 toml==0.10.2
+--find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.12.1+cu116
+--find-links https://download.pytorch.org/whl/torch_stable.html
 torchaudio==0.12.1+cu116
 torchmetrics==0.10.0
+--find-links https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.13.1+cu116
 tornado==6.2
 tqdm==4.64.1
