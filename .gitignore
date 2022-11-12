@@ -5,6 +5,9 @@
 # pip
 pip
 
+# datasets
+diabetic_retinopathy/dataset
+
 
 ### macOS ###
 # General
