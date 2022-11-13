@@ -7,6 +7,7 @@ pip
 
 # datasets
 diabetic_retinopathy/dataset
+exp_env/
 
 
 ### macOS ###
