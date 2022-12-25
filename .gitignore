@@ -9,6 +9,9 @@ pip
 diabetic_retinopathy/dataset
 exp_env/
 
+# saved models 
+*.pt
+
 
 ### macOS ###
 # General
