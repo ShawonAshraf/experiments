@@ -38,9 +38,7 @@ def read_data(file_path="./data/input.txt"):
     # remove new line escape sequences
     data = [d for d in data if d != "\n"]
     data = [d.replace("\n", "") for d in data]
-    # add the END symbol
-    # data = [d + " [END]" for d in data]
-    
+
     return data
 
 def tokenize_sentence(sentence):
