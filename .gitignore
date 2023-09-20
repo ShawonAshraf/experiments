@@ -207,3 +207,6 @@ lightning_bert_comet/lightning-bert-comet/55c96ca1c2f94e81ab70ab5a0e573770/check
 
 # tensorboard
 runs/
+
+# dataset
+dataset/
