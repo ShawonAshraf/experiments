@@ -6,13 +6,14 @@ url = "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshake
 
 os.makedirs("data", exist_ok=True)
 
+
 def download(url=url):
     file_name = url.split("/")[-1]
     download_path = os.path.join("./data", file_name)
-    
+
     if os.path.exists(download_path):
         print("Already downloaded!")
-        
+
     else:
         # ============================================ download
         print("Downloading, sit tight!")
@@ -31,19 +32,21 @@ def download(url=url):
 
 def read_data(file_path="./data/input.txt"):
     assert os.path.exists(file_path)
-    
+
     with open(file_path, "r") as f:
         data = f.readlines()
-        
+
     # remove new line escape sequences
     data = [d for d in data if d != "\n"]
     data = [d.replace("\n", "") for d in data]
 
     return data
 
+
 def tokenize_sentence(sentence):
     s = sentence.split(" ")
     return s
+
 
 def batch_tokenize_sentences(sentences):
     return [tokenize_sentence(s) for s in sentences]
