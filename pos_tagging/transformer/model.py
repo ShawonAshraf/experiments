@@ -53,18 +53,21 @@ class TagFormer(L.LightningModule):
         
         # fc
         self.fc = nn.Linear(512, self.n_labels)
-        self.dropout = nn.Dropout(0.1)
+        self.dropout = nn.Dropout(0.5)
         
-        # self.__custom_init()
-        self.embedding.weight.data[self.pad_idx] = torch.zeros(self.embedding_dim, )
         
         self.pe = PositionalEncoding(512)
         
-        
-    def __custom_init(self):
-        for p in self.parameters():
-            nn.init.normal_(p.data, mean=0, std=0.1)
-            
+        # self.init_weights()
+        self.embedding.weight.data[self.pad_idx] = torch.zeros(self.embedding_dim, )
+
+    # https://pytorch.org/tutorials/beginner/transformer_tutorial.html
+    def init_weights(self) -> None:
+        initrange = 0.1
+        self.embedding.weight.data.uniform_(-initrange, initrange)
+        self.fc.bias.data.zero_()
+        self.fc.weight.data.uniform_(-initrange, initrange)
+
     
         
     def forward(self, x) -> Any:
