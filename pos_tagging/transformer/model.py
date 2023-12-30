@@ -53,7 +53,7 @@ class TagFormer(L.LightningModule):
         
         # fc
         self.fc = nn.Linear(512, self.n_labels)
-        self.dropout = nn.Dropout(0.5)
+        self.dropout = nn.Dropout(0.1)
         
         
         self.pe = PositionalEncoding(512)
