@@ -277,7 +277,6 @@ dependencies:
       - deltalake==0.8.1
       - docker-pycreds==0.4.0
       - einops==0.6.0
-      - en-core-web-sm==3.7.0
       - ffmpeg-python==0.2.0
       - filelock==3.8.0
       - fire==0.4.0
