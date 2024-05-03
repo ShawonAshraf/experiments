@@ -27,6 +27,7 @@ wandb = "^0.16.6"
 spacy = "^3.7.4"
 lightning = "^2.2.2"
 torchmetrics = "^1.3.2"
+peft = "^0.10.0"
 
 
 [build-system]
